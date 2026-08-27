@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lahori Zaiqa · Pakistani Fast Food</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,800;14..32,900&display=swap" rel="stylesheet" />
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- ====== NAVIGATION ====== -->
+    <nav>
+        <div class="container nav-inner">
+            <div class="logo">
+                <i class="fas fa-utensils" style="color:#f97316;"></i>
+                Lahori <span>Zaiqa</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#footer">Contact</a></li>
+            </ul>
+            <div class="nav-cart" id="cartToggle">
+                <i class="fas fa-shopping-bag"></i>
+                <span class="cart-count" id="cartCount">0</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ====== CART DROPDOWN ====== -->
+    <div class="cart-dropdown" id="cartDropdown">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-bag"></i> Your Order</h3>
+            <button class="cart-close" id="cartClose"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p style="color:#6b6b6b; text-align:center; padding:20px;">Your cart is empty.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total" id="cartTotal">Total: Rs. 0</div>
+            <button class="btn-primary" id="orderViaWhatsAppBtn" style="width:100%; justify-content:center; display:flex; gap:8px; padding:12px;">
+                <i class="fab fa-whatsapp"></i> Order via WhatsApp
+            </button>
+        </div>
+    </div>
+
+    <!-- ====== HERO ====== -->
+    <header class="hero">
+        <div class="container hero-inner">
+            <div class="hero-text">
+                <span class="hero-badge"><i class="fas fa-fire"></i> Grilled fresh daily</span>
+                <h1>Desi Flavours, <br /><span>Fire‑Grilled</span> Soul</h1>
+                <p>From the streets of Lahore to your plate – juicy burgers, cheesy pizzas, creamy pastas, and legendary rolls. <strong>No freezers, just flavour.</strong></p>
+                <a href="#menu" class="btn-primary"><i class="fas fa-arrow-down"></i> Explore the Menu</a>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-card">
+                    <div class="hero-emoji">🍔</div>
+                    <h3>Today's Special</h3>
+                    <p><strong>Beast Beef Burger</strong> – Rs. 750</p>
+                    <div class="hero-ticker">
+                        <i class="fas fa-clock"></i> Fresh batch <span id="freshTime">just now</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ====== CATEGORY TABS ====== -->
+    <section class="container categories" id="menu">
+        <h2 class="section-title">Our <span>Menu</span></h2>
+        <p class="section-sub">Tap a category to filter your craving</p>
+
+        <div class="tab-bar" id="tabBar">
+            <button class="tab-btn active" data-category="all"><i class="fas fa-utensils"></i> All</button>
+            <button class="tab-btn" data-category="burgers"><i class="fas fa-burger"></i> Burgers</button>
+            <button class="tab-btn" data-category="pizzas"><i class="fas fa-pizza-slice"></i> Pizzas</button>
+            <button class="tab-btn" data-category="pastas"><i class="fas fa-spaghetti"></i> Pastas</button>
+            <button class="tab-btn" data-category="rolls"><i class="fas fa-egg-roll"></i> Rolls</button>
+            <button class="tab-btn" data-category="desserts"><i class="fas fa-ice-cream"></i> Desserts &amp; Drinks</button>
+        </div>
+    </section>
+
+    <!-- ====== MENU GRID ====== -->
+    <section class="container menu-grid-section">
+        <div class="menu-grid" id="menuGrid">
+            <!-- Injected by JavaScript -->
+        </div>
+    </section>
+
+    <!-- ====== ABOUT ====== -->
+    <section class="container about" id="about">
+        <div class="about-card">
+            <div>
+                <h3><i class="fas fa-location-dot" style="color:#f97316;"></i> Visit Us</h3>
+                <p>13‑B, Main Boulevard, <br />Gulberg III, Lahore</p>
+            </div>
+            <div>
+                <h3><i class="fas fa-clock" style="color:#f97316;"></i> Open Hours</h3>
+                <p>Mon–Thu: 11am – 12am <br />Fri–Sun: 11am – 3am</p>
+            </div>
+            <div>
+                <h3><i class="fas fa-phone" style="color:#f97316;"></i> Call &amp; Order</h3>
+                <p>+92335 9635567</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== FOOTER ====== -->
+    <footer id="footer">
+        <div class="container footer-inner">
+            <div>
+                <div class="logo" style="font-size:1.6rem;">
+                    <i class="fas fa-utensils" style="color:#f97316;"></i>
+                    Lahori <span>Zaiqa</span>
+                </div>
+                <p style="color:#6b6b6b; margin-top:8px;">Authentic Pakistani fast food since 2018.</p>
+            </div>
+            <div>
+                <p style="font-weight:600;">Follow the heat</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div style="color:#6b6b6b; font-size:0.9rem;">
+                © 2026 · Lahori Zaiqa <br /> Made with <i class="fas fa-heart" style="color:#f97316;"></i> in Pakistan
+            </div>
+        </div>
+    </footer>
+
+    <!-- ====== TOAST ====== -->
+    <div id="toast" class="toast">
+        <i class="fas fa-check-circle" style="color:#22c55e;"></i>
+        Added <span id="toastItem">item</span> to your order!
+    </div>
+
+    <!-- ====== ORDER MODAL (Popup) ====== -->
+    <div class="modal-overlay" id="orderModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2><i class="fas fa-clipboard-list"></i> Confirm Your Order</h2>
+                <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Customer Name <span class="required">*</span></label>
+                    <input type="text" id="custName" placeholder="e.g. Hammad Ahmad" />
+                </div>
+                <div class="form-group">
+                    <label>WhatsApp / Phone Number <span class="required">*</span></label>
+                    <input type="tel" id="custPhone" placeholder="e.g. 03XXXXXXXXX" />
+                </div>
+                <div class="form-group">
+                    <label>Delivery Address <span class="required">*</span></label>
+                    <textarea id="custAddress" rows="2" placeholder="Street, Sector, City"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Your Order <span class="required">*</span></label>
+                    <div class="order-preview-box" id="orderPreviewBox">
+                        <!-- Auto-filled from cart -->
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Special Instructions</label>
+                    <textarea id="custNote" rows="2" placeholder="e.g. Call before delivery, extra sauce, etc."></textarea>
+                </div>
+                <div class="modal-total" id="modalTotal">Total: Rs. 0</div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-primary" id="placeOrderBtn" style="width:100%; justify-content:center; display:flex; gap:10px;">
+                    <i class="fab fa-whatsapp fa-lg"></i> Place Order on WhatsApp
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
